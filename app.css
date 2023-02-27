@@ -1,8 +1,52 @@
+*{
+    margin: 0px;
+}
+/* Header */
+header{
+
+    background-color: rgb(245, 143, 159);
+    min-height: 50px;
+    
+}
+.header-container{
+    max-width: 1024px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+.header-container h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.header-container h1 span:last-child{
+    /* font-weight: 500; */
+    font-size: 1.3rem;
+}
+
+nav{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    /* padding-right: 300px; */
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border: 1px solid white;
+}
+
+body{
+    background-color: rgb(240, 231, 232);
+}
 .container{
-    background-color: aqua;
+    /* background-color: aqua; */
     max-width: 1024px;
     min-height: 500px;
-    margin:0 auto;
+    margin:2rem auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -28,4 +72,83 @@
 }
 .col p::first-line{
     font-weight: 700;
+}
+.hamburger-icon{
+    display: none;
+}
+.inside a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border: 1px solid white;
+}
+.burgermenu{
+    width: 40px;
+}
+/* Media Queries */
+@media (max-width:1000px) {
+    .col{
+        width: 45%;
+    }
+    nav{
+        display: none;
+    }
+    
+.hamburger-icon{
+    display: inline;
+    padding-right: 50px;
+}
+.inside{
+    display: none;
+    position: absolute;
+    background-color: coral;
+}
+.inside a{
+    display: block;
+}
+   /* nav{
+    width: 30%;
+    padding-right: 50px;
+    justify-content: space-around;
+   } */
+    
+
+}
+@media (max-width:450px) {
+    .col{
+        width: 100%;
+    }
+    .header-container{
+        display: block;
+        
+    }
+    .header-container h1{
+        padding: 10px 0px 10px 3px;
+    }
+    nav{
+        display: none;
+    }
+    .hamburger-icon{
+        
+        display: inline;
+        padding-left: 170px;
+    }
+    
+    .inside{
+        display: none;
+        position: absolute;
+        background-color: coral;
+    }
+    .inside a{
+        display: block;
+    }
+    /* nav{
+        width: 100%;
+        display: block;
+        
+    }
+    nav a{
+        display: block;
+        /* width: 100%; */
+    /* } */ 
 }
